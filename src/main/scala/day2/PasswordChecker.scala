@@ -19,7 +19,6 @@ object PasswordChecker {
     }
 
     def characterAppearsInOnlyOneOfPositions(positions: List[Int], char: Char)(password: String): Boolean = {
-        val result = positions.exists((expectedPosition) => characterAppearsInPosition(expectedPosition, char)(password))
         val matchedPositions = positions.filter((expectedPosition) => characterAppearsInPosition(expectedPosition, char)(password))
         matchedPositions.length == 1
     }
